@@ -34,3 +34,23 @@ c)  def bunnyEars(bunnies):
 Suppose that you have an n-story building and plenty of eggs. Suppose also that an egg gets broken if it is thrown off floor f or higher, and doesn't get broken if dropped off a floor less than floor f. Devise a strategy to determine the value of f such that the number of dropped + broken eggs is minimized.
 
 Write out your proposed algorithm in plain English or pseudocode AND give the runtime complexity of your solution.
+
+ 
+ 
+My plan would be to use a binary search in order to test the floors, to find out which one the egg if needed should be tossed from.
+
+def find_breaking_point(n):
+  midpoint = len(n) / 2
+  for f in range(intmidpoint), len(n):
+  if n[f] == "broken":
+  if n[f - 1] != "broken":
+  return f + 1
+  else:
+  return find_breaking_point(n) - midpoint
+
+  elif n[f] != "broken":
+  if n[f + 1] == "broken":
+  return f + 1 +1
+  else:
+  return find_breaking_point(n) - midpoint
+  # My solution would be Quadratic O(n^2) because it is recurrsive.

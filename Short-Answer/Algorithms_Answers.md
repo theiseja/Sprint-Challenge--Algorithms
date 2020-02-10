@@ -2,13 +2,13 @@
 
 ## Exercise I
 
-a)
+a) O(n) Because the size of n is undetermined
 
 
-b)
+b) O(n^2) Because of the nested for loop
 
 
-c)
+c) O(n) recursive 
 
 ## Exercise II
 
